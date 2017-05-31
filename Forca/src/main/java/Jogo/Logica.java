@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author esdra
  */
-public class Tela {
+public class Logica {
 
     Random r = new Random();
 
@@ -38,13 +38,24 @@ public class Tela {
 
     }
 
+    public boolean EscolhaDeLetra(String s) {
+        String[] Alfabeto = {"a", "b", "c", "d", "e", "f",
+            "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
+            "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+        for (int i = 0; i < listaPalavras.length; i++) {
+            if (s.equals(Alfabeto[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
 
-        Tela te = new Tela();
-        
+       Logica te = new Logica();
+
         te.palavraAleatoria();
         te.apresentarPalavra();
-        
+
     }
 }
